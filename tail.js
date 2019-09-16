@@ -24,5 +24,5 @@ const tail = function(array) {
 
 //Test Case
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words)); 
+console.log(tail(words));
 assertEqual(words.length, 3);

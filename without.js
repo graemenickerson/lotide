@@ -24,6 +24,7 @@ const without = function(sourceArray, toRemove) {
     for (let j = 0; j < toRemove.length; j++) {
       if (sourceArray[i] === toRemove[j]) {
         match = true;
+        break;
       }
     }
     if (!match) output.push(sourceArray[i]);

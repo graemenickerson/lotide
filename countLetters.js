@@ -11,6 +11,7 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(inputString) {
   let output = {};
+  inputString = inputString.replace(/\s/g, '');
   for (let element of inputString) {
     output[element] ? output[element] += 1 : output[element] = 1;
   }

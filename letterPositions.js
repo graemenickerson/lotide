@@ -17,3 +17,21 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
+const letterPositions = function(sentence) {
+  const results = {};
+  sentence = sentence.split("");
+  for (let i = 0; i < sentence.length; i++) {
+    if(sentence[i] !== " " ) {
+      if (results[sentence[i]]) {
+        results[sentence[i]].push(i);
+      } else {
+        results[sentence[i]] = [i];
+      }
+    }
+  }
+  return results;
+};
+
+console.log(letterPositions("lighthouse in the house"));
+const resultTest = letterPositions("hello");
+assertArraysEqual(resultTest.l, [2, 3]);

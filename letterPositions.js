@@ -2,9 +2,13 @@
 // September 17, 2019
 
 const eqArrays = function(firstArray, secondArray) {
-  if (firstArray.length !== secondArray.length) {return false;}
+  if (firstArray.length !== secondArray.length) {
+    return false;
+  }
   for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== secondArray[i]) {return false;}
+    if (firstArray[i] !== secondArray[i]) {
+      return false;
+    }
   }
   return true;
 };
@@ -21,7 +25,7 @@ const letterPositions = function(sentence) {
   const results = {};
   sentence = sentence.split("");
   for (let i = 0; i < sentence.length; i++) {
-    if(sentence[i] !== " " ) {
+    if (sentence[i] !== " ") {
       if (results[sentence[i]]) {
         results[sentence[i]].push(i);
       } else {

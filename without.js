@@ -19,16 +19,21 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 
 const without = function(sourceArray, toRemove) {
   let output = [];
-  for (let i = 0; i < sourceArray.length; i++) {
-    let match = false;
-    for (let j = 0; j < toRemove.length; j++) {
-      if (sourceArray[i] === toRemove[j]) {
-        match = true;
-        break;
-      }
+  for (let element of sourceArray){
+    if (!toRemove.includes(element)) {
+      output.push(element);
     }
-    if (!match) output.push(sourceArray[i]);
   }
+  // for (let i = 0; i < sourceArray.length; i++) {
+  //   let match = false;
+  //   for (let j = 0; j < toRemove.length; j++) {
+  //     if (sourceArray[i] === toRemove[j]) {
+  //       match = true;
+  //       break;
+  //     }
+  //   }
+  //   if (!match) output.push(sourceArray[i]);
+  // }
   return output;
 };
 

@@ -10,11 +10,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(firstArray, secondArray) {
-  if (firstArray.length !== secondArray.length) return false;
-  for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== secondArray[i]) return false;
+  let equivelentArrays = true;
+  if (firstArray.length !== secondArray.length) {
+    equivelentArrays = false;
   }
-  return true;
+  for (let i = 0; i < firstArray.length; i++) {
+    if (Array.isArray(firstArray[i]) && Array.isArray(secondArray[i])) {
+      equivelentArrays = eqArrays(firstArray[i], secondArray[i]);
+    } else if (firstArray[i] !== secondArray[i]) {
+      equivelentArrays = false;
+    }
+  }
+  return equivelentArrays;
 };
 
 // TESTING PARAMS
@@ -23,3 +30,8 @@ assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
+
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true); // => true
+
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false); // => false
+assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false); // => false

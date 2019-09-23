@@ -1,5 +1,6 @@
-//Graeme Nickerson
-//September 16, 2019
+// assertEqual.js
+// Graeme Nickerson
+// September 16, 2019
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -9,8 +10,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("Test 1", "Test 1");
-assertEqual(1, 2);
+module.exports = assertEqual;
+
+

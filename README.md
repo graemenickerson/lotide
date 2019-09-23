@@ -30,3 +30,4 @@ The following functions are currently implemented:
 * `tail(array)`: Takes an array and returns all of the array without the first element.
 * `middle(array)`: Takes an array and returns the middle element if the length is a odd number and the middle two elements if the length is even.
 * `flatten(array)`: Takes an array filled with nested arrays and returns a single array containing all values stored in all of the arrays.
+* `countOnly(array, object)`: Take an array and an object and searches for the items in the object in the array and returns an object with the results.

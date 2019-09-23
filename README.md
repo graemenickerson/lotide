@@ -29,3 +29,4 @@ The following functions are currently implemented:
 * `head(array)`: Takes an array and returns the first element.
 * `tail(array)`: Takes an array and returns all of the array without the first element.
 * `middle(array)`: Takes an array and returns the middle element if the length is a odd number and the middle two elements if the length is even.
+* `flatten(array)`: Takes an array filled with nested arrays and returns a single array containing all values stored in all of the arrays.

@@ -2,7 +2,7 @@
 // Graeme Nickerson
 // September 23, 2019
 
-const assertEqual = require("../assertEqual.js");
+const assert = require('chai').assert;
 const eqArrays = require("../eqArrays.js");
 // TESTING PARAMS
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true

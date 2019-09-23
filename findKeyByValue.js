@@ -1,13 +1,6 @@
+// findKeyByValue.js
 // Graeme Nickerson
 // September 17, 2019
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed:`, actual, `===`, expected);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed:`, actual, `!==`, expected);
-  }
-};
 
 const findKeyByValue = function(searchObject, searchTerm) {
   const keys = Object.keys(searchObject);
@@ -19,13 +12,4 @@ const findKeyByValue = function(searchObject, searchTerm) {
   return undefined;
 };
 
-// TEST ASSERTIONS
-
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;

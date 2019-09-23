@@ -1,7 +1,6 @@
+// eqArrays.js
 // Graeme Nickerson
 // September 17, 2019
-
-const assertEqual = require("./assertEqual.js");
 
 const eqArrays = function(firstArray, secondArray) {
   let equivelentArrays = true;

@@ -34,3 +34,4 @@ The following functions are currently implemented:
 * `leterPositions(string)`: Takes a string and returns the indexed positions of each of the characters in an object.
 * `findKeyByValue(object, string)`: Takes in an object and a string and returns the key that matches the value of the string.
 * `eqArrays(array1, array2)`: Takes two arrays and compares them for equality across all elements.
+* `eqObjects(object1, object2)`: Takes two objects and compares them for equality across all elements.

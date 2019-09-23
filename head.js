@@ -3,6 +3,8 @@
 
 const assertEqual = require('./assertEqual');
 
+
+//Takes an array and returns the first element
 const head = function(array) {
   return array[0];
 };

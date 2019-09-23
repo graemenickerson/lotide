@@ -2,15 +2,27 @@
 // Graeme Nickerson
 // September 23, 2019
 
+const assert = require('chai').assert;
 const middle = require("../middle.js");
-const assertArraysEqual = require("../assertArraysEqual.js");
 
-// TEST ASSERTIONS
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]), []); // => []
 
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
+describe('middle.js', () => {
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+  it('returns [] when an array with a length is 1 ie [5]', () => {
+    assert.deepEqual(middle([5]), []);
+  });
+
+  it('returns [] when an array with a length is 2 ie [1, 2]', () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+  it('returns the middle of an array when the array length is odd', () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+
+  it('returns the middle two items of an array when the array length is even', () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+  });
+
+  
+});

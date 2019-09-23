@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@graemenickerson/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library built for educational purposes.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/graemenickerson/lotide.git"
   },
-  "author": "",
+  "author": "Graeme Nickerson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/graemenickerson/lotide/issues"

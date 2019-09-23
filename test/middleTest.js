@@ -23,6 +23,5 @@ describe('middle.js', () => {
   it('returns the middle two items of an array when the array length is even', () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
   });
-
   
 });

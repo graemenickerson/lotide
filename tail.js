@@ -1,13 +1,8 @@
-//Graeme Nickerson
-//September 16, 2019
+// tail.js
+// Graeme Nickerson
+// September 16, 2019
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed:`, actual, `===`, expected);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed:`, actual, `!==`, expected);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const tail = function(array) {
   if (array === undefined || array.length === 1) {
@@ -21,8 +16,5 @@ const tail = function(array) {
   }
 };
 
+module.exports = tail;
 
-//Test Case
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words));
-assertEqual(words.length, 3);

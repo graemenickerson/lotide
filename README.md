@@ -33,3 +33,4 @@ The following functions are currently implemented:
 * `countOnly(array, object)`: Takes an array and an object and searches for the items in the object in the array and returns an object with the results.
 * `leterPositions(string)`: Takes a string and returns the indexed positions of each of the characters in an object.
 * `findKeyByValue(object, string)`: Takes in an object and a string and returns the key that matches the value of the string.
+* `eqArrays(array1, array2)`: Takes two arrays and compares them for equality across all elements.
